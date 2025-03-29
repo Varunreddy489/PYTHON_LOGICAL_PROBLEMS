@@ -149,18 +149,18 @@ print(associated_keys(list))
 
 def list_to_nested_dict(lst):
     nested_dict = {}
-    current = nested_dict  # Pointer to the current level
+    current = nested_dict  
 
-    for item in lst[:-1]:  # Iterate through all elements except the last
-        current[item] = {}  # Create a new nested dictionary
-        current = current[item]  # Move the pointer to the newly created dictionary
+    for item in lst[:-1]:  
+        current[item] = {}  
+        current = current[item]  
 
-    if lst:  # If list is not empty, set the last element to an empty dictionary
+    if lst:  
         current[lst[-1]] = {}
 
     return nested_dict
 
-# Test case
+
 lst = ['a', 'b', 'c', 'd']
 print(list_to_nested_dict(lst))
 
