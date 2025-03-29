@@ -145,7 +145,24 @@ list = [
 
 print(associated_keys(list))
 
-# Todo convert a list into a nested dictionary of keys.
+# convert a list into a nested dictionary of keys.
+
+def list_to_nested_dict(lst):
+    nested_dict = {}
+    current = nested_dict  # Pointer to the current level
+
+    for item in lst[:-1]:  # Iterate through all elements except the last
+        current[item] = {}  # Create a new nested dictionary
+        current = current[item]  # Move the pointer to the newly created dictionary
+
+    if lst:  # If list is not empty, set the last element to an empty dictionary
+        current[lst[-1]] = {}
+
+    return nested_dict
+
+# Test case
+lst = ['a', 'b', 'c', 'd']
+print(list_to_nested_dict(lst))
 
 
 #  Write a Python program to check multiple keys exists in a dictionary
