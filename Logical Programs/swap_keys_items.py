@@ -9,4 +9,16 @@ def swap_keys_items(obj1):
     return obj2
 
 input_dict = {"a": 1, "b": 2, "c": 2, "e": 3}
+a = swap_keys_items(input_dict)
 print(swap_keys_items(input_dict))
+
+
+def again_swap(a):
+   new_dict={}
+    
+   for value, keys in a.items():
+        for key in keys:
+            new_dict[key] = value
+   return new_dict
+
+print(again_swap(a))
