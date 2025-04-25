@@ -1,4 +1,4 @@
-def square_root(x, precision=1e-6):
+def square_root(x):
     if x < 0:
         raise ValueError("Cannot compute square root of a negative number.")
 
@@ -6,7 +6,7 @@ def square_root(x, precision=1e-6):
     high = max(1.0, x)
     mid = (low + high) / 2
 
-    while abs(mid * mid - x) > precision:
+    while low<high:
         if mid * mid < x:
             low = mid
         else:
