@@ -1,0 +1,19 @@
+File_IO/90M.txt
+File_IO/95M.txt
+File_IO/98M.txt
+File_IO/99M.txt
+File_IO/output.txt
+File_IO/combined.txt
+Logical Programs/input.txt
+Logical Programs/output.txt
+__pycache__
+
+test.py
+Python-Scripts
+SCRIPTS
+venv
+.idea
+pytest/.pytest_cache
+
+oops
+pytest

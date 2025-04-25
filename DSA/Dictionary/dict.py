@@ -93,8 +93,10 @@ def create_dict(str):
     dict = {}
 
     for i in str:
-        dict[i] = dict.get(i, 0) + 1
-
+        if i not in dict:
+            dict= 1
+        else:
+            dict[i]+= 1
     return dict
 
 
@@ -147,21 +149,22 @@ print(associated_keys(list))
 
 # convert a list into a nested dictionary of keys.
 
+
 def list_to_nested_dict(lst):
     nested_dict = {}
-    current = nested_dict  
+    current = nested_dict
 
-    for item in lst[:-1]:  
-        current[item] = {}  
-        current = current[item]  
+    for item in lst[:-1]:
+        current[item] = {}
+        current = current[item]
 
-    if lst:  
+    if lst:
         current[lst[-1]] = {}
 
     return nested_dict
 
 
-lst = ['a', 'b', 'c', 'd']
+lst = ["a", "b", "c", "d"]
 print(list_to_nested_dict(lst))
 
 

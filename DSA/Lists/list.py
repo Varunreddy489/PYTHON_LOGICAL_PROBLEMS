@@ -237,3 +237,23 @@ def common_items_set(list1, list2):
 print(common_items_set(list1, list2))
 
 #  split a list based on first character of word.
+
+
+def remove_duplicates(list_of_lists):
+
+    unique_lists = []
+    seen = set()
+
+    for sublist in list_of_lists:
+
+        sublist_tuple = tuple(sublist)
+        if sublist_tuple not in seen:
+            unique_lists.append(sublist)
+            seen.add(sublist_tuple)
+
+    return unique_lists
+
+
+sample_list = [[10, 20], [40], [30, 56, 25], [10, 20], [33], [40]]
+new_list = remove_duplicates(sample_list)
+print(new_list)
